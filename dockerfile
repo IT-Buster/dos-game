@@ -25,6 +25,7 @@ COPY nginx.conf /etc/nginx/
 COPY webaudio.js /usr/share/novnc/core/
 COPY dosbox.conf /root/.dosbox/dosbox.conf
 COPY xstartup /root/.vnc/xstartup
+RUN chmod +x /root/.vnc/xstartup
 
 #Inject code for audio in the NoVNC client
 RUN sed -i "/import RFB/a \
